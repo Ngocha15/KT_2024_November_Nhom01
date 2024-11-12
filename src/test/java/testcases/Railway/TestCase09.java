@@ -1,28 +1,14 @@
 package testcases.Railway;
 
 import common.Constant.Constant;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pageObjects.Railway.ChangePassword;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
 
-public class TC09 {
-    @BeforeMethod
-    public void beforMethod() {
-        System.out.println("Pre-condition");
-        Constant.WEBDRIVER = new ChromeDriver();
-        Constant.WEBDRIVER.manage().window().maximize();
-    }
-    @AfterMethod
-    public void afterMethod(){
-        System.out.println("Post-condition");
+public class TestCase09 extends PreparationCommonTest {
 
-        Constant.WEBDRIVER.quit();
-    }
     @Test
     public void TC09() {
         System.out.println("User can change password");

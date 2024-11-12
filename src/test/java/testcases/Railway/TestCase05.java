@@ -9,19 +9,7 @@ import org.testng.annotations.Test;
 import pageObjects.Railway.HomePage;
 import pageObjects.Railway.LoginPage;
 
-public class TC05 {
-    @BeforeMethod
-    public void beforMethod() {
-        System.out.println("Pre-condition");
-        Constant.WEBDRIVER = new ChromeDriver();
-        Constant.WEBDRIVER.manage().window().maximize();
-    }
-    @AfterMethod
-    public void afterMethod(){
-        System.out.println("Post-condition");
-
-        Constant.WEBDRIVER.quit();
-    }
+public class TestCase05 extends PreparationCommonTest {
     @Test
     public void TC05() {
         System.out.println("System shows message when user enters wrong password several times");

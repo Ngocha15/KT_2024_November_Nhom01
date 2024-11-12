@@ -143,12 +143,15 @@ public class GeneralPage {
     public String getErrorPidLengthMsg() {
         return this.getLblErrorPidLengthMsg().getText();
     }
-    public String getSuccessMesage() {
+    public String getSuccessMessage() {
         return this.getLblSuccessMessage().getText();
     }
 
     public  String getPageTitleText() {
         return this.getPageTitle().getText();
+    }
+    public String getMyTicketTabText() {
+        return this.getTabMyTicket().getText();
     }
 
 

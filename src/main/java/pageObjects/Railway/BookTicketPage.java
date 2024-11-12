@@ -21,8 +21,8 @@ public class BookTicketPage extends  GeneralPage{
     private final By btnBookTicket = By.xpath("//input[@value='Book ticket']");
     private final By ticketInformation = By.xpath("//tr[@class='OddRow']//td");
     private final By ticketInformationTitles = By.xpath("//tr[@class='TableSmallHeader']//th");
-    private final By inForDepartStation = By.xpath("//select[@name='DepartStation']/option[@selected='selected' and text()='Huế']");
-    private final By inForArriveStation = By.xpath("//select[@name='ArriveStation']/option[@selected='selected' and text()='Sài Gòn']");
+    private final By inForDepartStation = By.xpath("//select[@name='DepartStation']/option[@selected='selected']");
+    private final By inForArriveStation = By.xpath("//select[@name='ArriveStation']/option[@selected='selected']");
 
 
     protected WebElement getDateSelectBox() {
@@ -75,11 +75,11 @@ public class BookTicketPage extends  GeneralPage{
         Select select = new Select(ticketAmountBox);
         select.selectByVisibleText(ticketAmount);
     }
-    public String isDepartValuesCorrect() {
-        return this.getInForDepartStation().getText();
+    public Boolean isDepartValuesCorrect(String value) {
+        return this.getInForDepartStation().getText().equals(value);
     }
-    public String isArriveValuesCorrect() {
-        return this.getInForArriveStation().getText();
+    public Boolean isArriveValuesCorrect(String value) {
+        return this.getInForArriveStation().getText().equals(value);
     }
 
     public BookTicketPage bookTicketPage(String date,String departStation,String arriveStation, String seatType, String ticketAmount) {

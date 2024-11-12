@@ -1,26 +1,11 @@
 package testcases.Railway;
 
-import common.Constant.Constant;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pageObjects.Railway.HomePage;
 
-public class TC04 {
-    @BeforeMethod
-    public void beforMethod() {
-        System.out.println("Pre-condition");
-        Constant.WEBDRIVER = new ChromeDriver();
-        Constant.WEBDRIVER.manage().window().maximize();
-    }
-    @AfterMethod
-    public void afterMethod(){
-        System.out.println("Post-condition");
+public class TestCase04 extends PreparationCommonTest{
 
-        Constant.WEBDRIVER.quit();
-    }
     @Test
     public void TC04() {
         System.out.println("Login page displays when un-logged User clicks on 'Book ticket' tab");
